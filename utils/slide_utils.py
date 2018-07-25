@@ -82,8 +82,12 @@ class Slideobject(object):
         # threading
         self.threads = []
         # split into chunks of thread_num
-        coord_list_chunks = [coord_list[index::thread_num] for index in range(thread_num)]
-        for i in range(thread_num):
+        if (len(coord_list) < thread_num):
+            coord_list_chunks = [coord_list[index::len(coord_list)] for index in range(len(coord_list))]
+        else:
+            coord_list_chunks = [coord_list[index::thread_num] for index in range(thread_num)]
+
+        for i in range(len(coord_list_chunks)):
 
             thread = threading.Thread(target=self._retrieve_tiles_to_queue_thread_target,
                                       args=(coord_list_chunks[i], rotation, voting, subsize, threading.Lock()))

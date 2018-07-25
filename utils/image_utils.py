@@ -86,8 +86,12 @@ class Imageobject(object):
         # threading
         self.threads = []
         # split into chunks of thread_num
-        path_list_chunks = [image_path_list[index::thread_num] for index in range(thread_num)]
-        for i in range(thread_num):
+        if (len(image_path_list) < thread_num):
+            path_list_chunks = [image_path_list[index::len(image_path_list)] for index in range(len(image_path_list))]
+        else:
+            path_list_chunks = [image_path_list[index::thread_num] for index in range(thread_num)]
+
+        for i in range(len(path_list_chunks)):
             thread = threading.Thread(target=self.retrieve_images_to_queue_thread_target,
                                       args=(path_list_chunks[i], rotation, threading.Lock()))
             thread.start()
