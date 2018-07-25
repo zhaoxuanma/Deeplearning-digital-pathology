@@ -11,7 +11,7 @@ from shutil import copyfile
 
 import cv2
 
-slide_folder = "Path_to_slides_files(.svs,.mrxs)"
+slide_folder = "Path_to_slides_files"
 model_path = "Path_to_Keras_model"
 # caffe_model_path = "Path_to_caffe_model_file(.caffemodel)"
 # caffe_prototxt_path = "Path_to_caffe_prototxt_file(.prototxt)"
@@ -63,8 +63,6 @@ def main():
         result_rgb, result_mask= slide_helper.reconstruct_segmentation_queue_to_level(
             data_queue=result_queue, result_level=2, save_raw=False) # segmentation
 
-        # mdict = {}
-        # mdict['Raw'] = result_raw
         print('Time elapsed: ', time.time() - t0)
 
         cv2.imwrite(os.path.splitext(slide_path)[0] + '_result_rgb.jpg',cv2.cvtColor(result_rgb,cv2.COLOR_RGB2BGR))

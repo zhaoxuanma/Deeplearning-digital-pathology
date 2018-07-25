@@ -36,7 +36,7 @@ def main():
         horizontal_flip=True)
 
     train_generator = train_datagen.flow_from_directory_segmentation(
-        directory = train_data_dir, image_subfolder='jpg', mask_subfolder='mask',
+        directory = train_data_dir, image_subfolder='image', mask_subfolder='mask',
         target_size=(img_width, img_height),
         classes=NB_CLASS,
         batch_size=batch_size, shuffle=True)
@@ -44,7 +44,7 @@ def main():
     validation_datagen = ImageDataGeneratorEXT()
 
     validation_generator = validation_datagen.flow_from_directory_segmentation(
-        directory=validation_data_dir, image_subfolder='jpg', mask_subfolder='mask',
+        directory=validation_data_dir, image_subfolder='image', mask_subfolder='mask',
         target_size=(img_width, img_height),
         classes=NB_CLASS,
         batch_size=batch_size, shuffle=True)
