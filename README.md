@@ -1,5 +1,5 @@
 # Deeplearning-digital-pathology
-This repository contains utilities for virtual slides and images analysis on [Keras](https:://keras.io/) and [Caffe](http://caffe.berkeleyvision.org/) and extension class of `ImageDataGenerator`  of Keras to generate batches of images with data augmentation for segmentation. 
+This repository contains utilities for [virtual slides](https://openslide.org/) and images classification and semantic segmentation with [Keras](https://keras.io/) and [Caffe](http://caffe.berkeleyvision.org/) and an extension class of `ImageDataGenerator`  of Keras to generate batches of images with data augmentation for segmentation. 
 Demo code is provided for reference.
 
 # Requirement
@@ -13,11 +13,29 @@ Keras 2.1
 OpenSlide 1.1
 Caffe 0.15 (optional)
 ```
-# Wordflow
+# Getting started
+**[slide_demo.py](slide_demo.py)**
+It shows an example of using the Keras or Caffe model to segment a whole virtual slide or classify slide in grid and saving the results.
 
-![Alt text](Workflow.png?raw=true "Title")
+__Segmentation:__
+![Alt text](Workflow_segmentation.png?raw=true "segmentation workflow")
+_Segmentation of Colon Glands in Inflammatory Bowel Disease Biopsies. Z Ma, Z Swiderska-Chadaj, N Ing, H Salemi, D McGovern, B Knudsen, A Gertych. Information Technologies in Biomedicine, Kamień Śląski, Poland, June 2018._
+
+__Classification:__
+![Alt text](Workflow_classification.png?raw=true "classification workflow")
+_Convolutional neural networks accurately distinguish four histologic growth patterns of lung adenocarcinoma: a validated three-cohort study to quantitate tumor patterns in digital slides. A Gertych, Z Swiderska-Chadaj, Z Ma, N Ing, T Markiewicz, 
+J Patera, H Salemi, S Guzman, A Walts, B S. Knudsen (In preparation)_
+
+**[image_demo.py](image_demo.py)**
+It shows an example of using the Keras or Caffe model to segment or classify images from a folder and saving the results.
+
+**[train_segmentation_demo.py](train_segmentation_demo.py)**
+It shows an example of training a segmentation model from scratch.
+
 
 # Contents
+__See comments or use `help` for detailed function usage.__
+
 **[ImageDataGeneratorEXT.py](KerasLayers/ImageDataGeneratorEXT.py)**
 
 An extension of `ImageDataGenerator` of Keras for semgentation images iteration , with similiar api of `flow_from_directory`.
@@ -95,11 +113,4 @@ Tensorflow (Keras) class (`TFobject`) for forwarding images batch to neural netw
 + `forward_from_queue_to_queue`
 Forward batch in data queue to neural network and put results in result queue.
 
-**[slide_demo.py](slide_demo.py)**
-It shows an example of using the pretrained model to segment a whole virtual slide and saving the results.
 
-**[image_demo.py](image_demo.py)**
-It shows an example of using the pretrained model to segment images from a folder and saving the results.
-
-**[train_segmentation_demo.py](train_segmentation_demo.py)**
-It shows an example of training a segmentation model from scratch.
