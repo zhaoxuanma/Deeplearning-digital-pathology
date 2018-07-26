@@ -19,12 +19,9 @@ It shows an example of using the Keras or Caffe model to segment a whole virtual
 
 __Segmentation:__
 ![Alt text](Workflow_segmentation.png?raw=true "segmentation workflow")
-_Segmentation of Colon Glands in Inflammatory Bowel Disease Biopsies. Z Ma, Z Swiderska-Chadaj, N Ing, H Salemi, D McGovern, B Knudsen, A Gertych. Information Technologies in Biomedicine, Kamień Śląski, Poland, June 2018._
 
 __Classification:__
 ![Alt text](Workflow_classification.png?raw=true "classification workflow")
-_Convolutional neural networks accurately distinguish four histologic growth patterns of lung adenocarcinoma: a validated three-cohort study to quantitate tumor patterns in digital slides. A Gertych, Z Swiderska-Chadaj, Z Ma, N Ing, T Markiewicz, 
-J Patera, H Salemi, S Guzman, A Walts, B S. Knudsen (In preparation)_
 
 **[image_demo.py](image_demo.py)**
 It shows an example of using the Keras or Caffe model to segment or classify images from a folder and saving the results.
@@ -114,3 +111,7 @@ Tensorflow (Keras) class (`TFobject`) for forwarding images batch to neural netw
 Forward batch in data queue to neural network and put results in result queue.
 
 
+# Related publications
++ Semantic Segmentation of Colon Glands in Inflammatory Bowel Disease Biopsies. Z Ma, Z Swiderska-Chadaj, N Ing, H Salemi, D McGovern, B Knudsen, A Gertych. Information Technologies in Biomedicine, Kamień Śląski, Poland, June 2018.
+
++ Convolutional neural networks accurately distinguish four histologic growth patterns of lung adenocarcinoma: a validated three-cohort study to quantitate tumor patterns in digital slides. A Gertych, Z Swiderska-Chadaj, Z Ma, N Ing, T Markiewicz, J Patera, H Salemi, S Guzman, A Walts, B S. Knudsen. (in preparation)
