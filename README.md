@@ -113,5 +113,3 @@ Forward batch in data queue to neural network and put results in result queue.
 
 # Related publications
 + Semantic Segmentation of Colon Glands in Inflammatory Bowel Disease Biopsies. Z Ma, Z Swiderska-Chadaj, N Ing, H Salemi, D McGovern, B Knudsen, A Gertych. Information Technologies in Biomedicine, Kamień Śląski, Poland, June 2018.
-
-+ Convolutional neural networks accurately distinguish four histologic growth patterns of lung adenocarcinoma: a validated three-cohort study to quantitate tumor patterns in digital slides. A Gertych, Z Swiderska-Chadaj, Z Ma, N Ing, T Markiewicz, J Patera, H Salemi, S Guzman, A Walts, B S. Knudsen. (in preparation)
