@@ -155,7 +155,7 @@ class Imageobject(object):
                     self.q.put((img_batch_, path_batch_, batch_ind, batch_count))
 
                     img_batch = []
-                    coord_batch = []
+                    path_batch = []
 
             else:  # same tile batch
 
